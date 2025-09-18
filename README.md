@@ -39,6 +39,13 @@ In this project, a number of software engineering concepts are incorporated:
         Validation logic and user input are easy.
 
         Simple threshold (below $500 = approved) is used in approval logic.
+          $${\color{red}
+        while True:
+                me.date = input("Enter the date (yyyy-mm-dd): ")
+                if me.date.strip() == "":
+                        print("You have entered nothing, Please enter a valid date.")
+                else:
+                        break$$
 -  D.R.Y (Don't Repeat Yourself)
         
         Input validation loops are also of the same reusable structure (check if empty, check type).
