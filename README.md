@@ -20,7 +20,7 @@ This repository shows how the idea and concepts of programming can be used to en
     - Manager response
     - Statistics display
 
-### Organisation
+### Program Design
 *	Class
 
         Manages creation, validation, total and approval status of requisitions.
