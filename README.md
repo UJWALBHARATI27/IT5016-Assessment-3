@@ -20,7 +20,7 @@ This repository shows how the idea and concepts of programming can be used to en
     - Manager response
     - Statistics display
 
-### Program Design
+### Program desigin
 *	Class
 
         Manages creation, validation, total and approval status of requisitions.
@@ -39,13 +39,18 @@ In this project, a number of software engineering concepts are incorporated:
         Validation logic and user input are easy.
 
         Simple threshold (below $500 = approved) is used in approval logic.
-          $${\color{red}
+
+         In the function of __init, when checking user inputs on date, staff-id, and staff-name.
+
+        Example
+
         while True:
                 me.date = input("Enter the date (yyyy-mm-dd): ")
                 if me.date.strip() == "":
                         print("You have entered nothing, Please enter a valid date.")
                 else:
-                        break$$
+                        break
+
 -  D.R.Y (Don't Repeat Yourself)
         
         Input validation loops are also of the same reusable structure (check if empty, check type).
@@ -74,6 +79,15 @@ In this project, a number of software engineering concepts are incorporated:
 
         Only needed features (input, approval, statistics) are done.
         None of premature database integration or additional complexity.
+
+        Example
+        if me.total_price < 500:
+                me.status = "approved"
+                me.refrence_number = me.staff_id.upper() + str(me.requisition_id)[-3:]
+        else:
+                me.status = "Pending"
+                me.refrence_number = "On process"
+
 * Clean Code > Clever Code
 
         Use descriptive identifiers (totalprice, requisitions) as opposed to abbreviated identifiers.
